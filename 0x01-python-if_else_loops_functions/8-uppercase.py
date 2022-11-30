@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-de uppercase(str):
+def uppercase(str):
     for i in str:
         j = ord(i)
         if j > ord("a") and j < ord("z"):
@@ -10,3 +10,4 @@ de uppercase(str):
     print()
 if __name__ == "__main__":
     uppercase()
+
