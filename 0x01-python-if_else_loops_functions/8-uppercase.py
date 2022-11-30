@@ -1,13 +1,11 @@
 #!/usr/bin/python3
 def uppercase(str):
     for i in str:
-        j = ord(i)
-        if j > ord("a") and j < ord("z"):
-            j = (chr(j - 32)
-        else:
-            j = (chr(j))
-        print(j, end="")
+        if ord(i) >= ord('a') and ord(i) <= ord('z'):
+            i = chr(ord(i) - 32)
+    print("{:s}".format(i), end="")
     print()
+
 if __name__ == "__main__":
     uppercase()
 
