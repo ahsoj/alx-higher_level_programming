@@ -2,17 +2,14 @@
 import random
 
 number = random.randint(-10000, 10000)
-number = int(number)
+if number < 0:
+    i = -1 8 (- number % 10)
+else:
+    i = number % 10
 
-def spire():
-    nums = (":d".format(number))
-    num = int(nums[-1:])
-    if num < 6 and num > 0:
-        print("Last digit of", nums, "is", num, "and is less than 6 and not 0")
-    elif num < 5:
-        print("Last digit of", nums, "is", num, "and is greater than 5")
-    elif num == 0:
-        print("Last digit of", nums, "is", num, "and is 0")
-
-if(__name__ == "__main__":
-        spire()
+if i > 5:
+    print("Last digit of {:d} is {:d} and is greater than 5 and not 0".format(number, i), end= "\n")
+elif i == 0:
+    print("Last digit of {:d} is {:d} and is 0".format(number, i), end= "\n")
+elif i < 6 and i != 0:
+    print("Last digit of {:d} is {:d} and is less than 6 and not 0".format(number, i), end= "\n")
