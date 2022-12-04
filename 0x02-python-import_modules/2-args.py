@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
+import sys
 if __name__ == "__main__":
     """print now"""
-    import sys
     
     c = len(sys.argv) - 1
     if c == 0:
