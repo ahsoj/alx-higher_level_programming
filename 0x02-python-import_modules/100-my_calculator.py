@@ -1,28 +1,31 @@
 #!/usr/bin/pyton3
+import sys
+from calculator_1 import add, sub, mul, div
 
 
-def main(argv):
-    n = len(argv)
-    idx = {
-        "+": add,
-        "-": sub,
-        "*": mul,
-        "/": div
-    }
+def main():
+    argc = sys.argv
+    n = len(argc)
     if n != 4:
-        print('Usage: {} <a> <operator> <b>'.format(argv[0]))
+        print("Usage: ./100-my_calculator.py <a> <operator> <b>")
     else:
-        a = int(argv[1])
-        b = int(argv[3])
-        c = argv[2]
-        if c not in '+-*/':
-            print('Unknown operator. Available operators: +, -, * and /')
-
-        res = idx[c](a, b)
-        print('{:d} {:s} {:d} = {:d}'.format(a, c, b, res))
+        a = int(argc[1])
+        b = int(argc[3])
+        if argc[2] == "+":
+            res = add(a, b)
+            print("{} + {} = {}".format(a, b, res))
+        elif argc[2] == "-":
+            res = sub(a, b)
+            print("{} - {} = {}".format(a, b, res))
+        elif argc[2] == "*":
+            res = mul(a, b)
+            print("{} * {} = {}".format(a, b, res))
+        elif argc[2] == "/":
+            res = div(a, b)
+            print("{} / {} = {}".format(a, b, res))
+        else:
+            print("Unknown operator. Available operators: +, -, * and /")
 
 
 if __name__ == '__main__':
-    from sys import argv
-    from calculator_1 import add, sub, mul, div
-    main(argv)
+    main()
