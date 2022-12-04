@@ -1,5 +1,6 @@
 #!/usr/bin/pyton3
 import sys
+from sys import exit
 from calculator_1 import add, sub, mul, div
 
 
@@ -8,6 +9,7 @@ def main():
     n = len(argc)
     if n != 4:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
+        exit(1)
     else:
         a = int(argc[1])
         b = int(argc[3])
@@ -25,6 +27,7 @@ def main():
             print("{} / {} = {}".format(a, b, res))
         else:
             print("Unknown operator. Available operators: +, -, * and /")
+            exit(1)
 
 
 if __name__ == '__main__':
