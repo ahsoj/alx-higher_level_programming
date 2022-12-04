@@ -3,9 +3,9 @@
 
 def element_at(my_list, idx):
     if idx < 0:
-        return None
+        pass
     elif idx > len(my_list):
-        return None
+        pass
     else:
         return my_list[idx]
 
