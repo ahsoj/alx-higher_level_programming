@@ -1,4 +1,4 @@
-#!/usr/bin/pyton3
+#!/usr/bin/python3
 import sys
 from sys import exit
 from calculator_1 import add, sub, mul, div
