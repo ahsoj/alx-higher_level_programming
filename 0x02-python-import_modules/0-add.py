@@ -5,7 +5,7 @@ from add_0 import add
 def adds():
     a = 1
     b = 2
-    print("{} + {} = {}".format(str(a), str(b), str(add(a, b))))
+    print("{:d} + {:d} = {:d}".format(a, b, add(a, b)), end="\n")
 
 
 if __name__ == "__main__":
