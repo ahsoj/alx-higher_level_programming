@@ -9,6 +9,7 @@ def uniq_add(my_list=[]):
             unique_list.append(q)
     for q  in unique_list:
         result += q
+    print(type(result))
     return result
 
 
