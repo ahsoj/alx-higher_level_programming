@@ -3,9 +3,7 @@ import sys
 
 
 def safe_print_integer_err(value):
-    set = False
     try:
-
         print("{:d}".format(value))
         return True
     except TypeError:
