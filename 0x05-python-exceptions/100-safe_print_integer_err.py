@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+import sys
 
 def safe_print_integer_err(value):
     set = False
@@ -8,10 +8,10 @@ def safe_print_integer_err(value):
             print(value)
             set = True
         else:
-            raise TypeError
+            sys.stderr.write("Exception: Unknown format code 'd' for object of type 'str'")
         return set
     except TypeError:
-        print("Exception: Unknown format code 'd' for object of type 'str'")
+        raise
 
 
 if __name__ == "__main__":
