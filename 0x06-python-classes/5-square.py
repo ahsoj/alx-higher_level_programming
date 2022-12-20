@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""define class Sqaure"""
 
 
 class Square:
@@ -8,6 +9,7 @@ class Square:
 
     @property
     def size(self):
+        """Private instance attribute: to retrieve it"""
         return self._Square__size
 
     def area(self):
@@ -15,8 +17,9 @@ class Square:
         print(self._Square__size * self._Square__size)
 
     def my_print(self):
+        """ that prints in stdout the square with the character # """
         if self._Square__size == 0:
-            print("\n", end="")
+            print("")
         for i in range(self._Square__size):
             for j in range(self._Square__size):
                 print("#", end="")
