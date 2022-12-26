@@ -1,0 +1,43 @@
+The ``0-add_integer`` module
+======================
+
+Using ``add_integer``
+-------------------
+
+This is an example text file in reStructuredText format.  First import
+``factorial`` from the ``example`` module:
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+Now use it:
+
+    >>> add_integer(4, 8)
+    12
+
+mixing from integer and floats only it's return integer
+NOTE:_ all input is casted for integer before run the function
+
+::
+    >>> add_integer(1.0, 2.0)
+    3
+    >>> add_integer(1.0, 2)
+    3
+
+::
+    >>> add_integer(1, b) 
+    TypeError: b must be an integer
+
+::
+    >>> add_integer(a, 2) 
+    TypeError: b must be an integer
+
+::
+    >>> print(add_integer(1, 2)) 
+    3
+
+for Non-Integers inputs or all others
+NOTE:_ all inputs casted before run function
+
+::
+    >>> add_integer("add", 5, 3)
+    TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
