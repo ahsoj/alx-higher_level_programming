@@ -17,8 +17,14 @@ def matrix_divided(matrix, div):
         for i in matrix:
             if all(isinstance(s, (int, float)) for s in i):
                 if div != 0:
-                    return ([list(map(lambda x: round(x / div, 2), row)) for row in matrix])
+                    return (
+                        [list(map(
+                            lambda x: round(x / div, 2), row
+                            ))for row in matrix]
+                        )
                 raise ZeroDivisionError("division by zero")
             else:
-                raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+                raise TypeError(
+                    "matrix must be a matrix (list of lists) of integers/floats"
+                    )
     raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
