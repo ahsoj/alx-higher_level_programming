@@ -53,6 +53,7 @@ class Rectangle:
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
+        """ return new instances """
         if isinstance(rect_1, Rectangle):
             if isinstance(rect_2, Rectangle):
                 if rect_1.area() > rect_2.area():
