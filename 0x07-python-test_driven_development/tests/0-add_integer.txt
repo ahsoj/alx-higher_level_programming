@@ -1,0 +1,55 @@
+The ``0-add_integer`` module
+======================
+
+Using ``add_integer``
+-------------------
+
+This is an example text file in reStructuredText format.  First import
+``add_integer`` from the ``0-add_integer`` module:
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+Now use it:
+
+::
+    >>> add_integer(4, 8)
+    12
+
+mixing from integer and floats only it's return integer
+NOTE:_ all input is casted for integer before run the function
+
+::
+    >>> add_integer(5.0, 2.0)
+    7
+
+::
+    >>> add_integer(-4, 6)
+    2
+
+::
+    >>> add_integer(-4.0, -6.0)
+    -10
+
+for Non-Integers inputs or all others
+NOTE:_ all inputs casted before run function
+
+
+::
+    >>> add_integer("school", 2)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+::
+    >>> add_integer(4, "School")
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+::
+    >>> add_integer(None)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+::
+    >>> add_integer(float('nan'))
+    Traceback (most recent call last):
+    ValueError: cannot convert float NaN to integer
