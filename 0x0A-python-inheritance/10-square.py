@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-"""Use ``Rectangle` in `Square` class"""
 Rectangle = __import__('9-rectangle').Rectangle
+"""Use ``Rectangle` in `Square` class"""
 
 
 class Square(Rectangle):
@@ -14,8 +14,4 @@ class Square(Rectangle):
 
     def area(self):
         """print square of size"""
-        return self.__size * self.__size
-    
-    def __str__(self):
-        """return string formated"""
-        return f"[Rectangle] {self.__size}/{self.__size}"
+        return (self.__size * self.__size)
