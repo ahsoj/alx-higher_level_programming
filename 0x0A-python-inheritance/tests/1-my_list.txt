@@ -18,12 +18,8 @@ Now use it:
     >>> my_list.append(3)
     >>> my_list.append(2)
     >>> print(my_list)
-    [1, 4, 3, 2]
-  
-::
     >>> my_list.print_sorted()
-    [1, 2, 3, 4]
-
-::
     >>> print(my_list)
+    [1, 4, 3, 2]
+    [1, 2, 3, 4]
     [1, 4, 3, 2]
