@@ -122,6 +122,15 @@ class Rectangle(Base):
                 elif k == "y":
                     self.y = v
 
+    def to_dictionary(self):
+        return {
+            "id": self.id,
+            "width": self.width,
+            "height": self.height,
+            "x": self.x,
+            "y": self.y
+        }
+
     def __str__(self) -> str:
         """returns [Rectangle] (<id>) <x>/<y> - <width>/<height>"""
         rect = "[Rectangle] ({}) {}/{} - {}/{}"
