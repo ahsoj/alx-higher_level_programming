@@ -1,7 +1,5 @@
 -- the second table in db
-DROP TABLE IF EXISTS `second_table`;
-FLUSH TABLES `second_table`;
-CREATE TABLE second_table(
+CREATE TABLE IF NOT EXISTS `second_table` (
 	id INT,
 	name VARCHAR(256),
 	score INT
