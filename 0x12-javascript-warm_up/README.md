@@ -1,6 +1,4 @@
-#!/usr/bin/node
-
-# Resources
+## Resources
 
 # Read or watch:
 
