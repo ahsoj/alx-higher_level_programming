@@ -8,6 +8,4 @@ if (!processArgv[0]) {
 	for (let i = 1; i <= processArgv; i++) {
 		console.log('C is fun');
 	}
-} else {
-	return;
 }
