@@ -5,7 +5,7 @@ function add (a, b) {
   console.log(a + b);
 }
 
-if (!processArgv[0] || processArgv[0] && !processArgv[1]) {
+if (!processArgv[0] || (processArgv[0] && !processArgv[1])) {
   console.log('NaN');
 } else {
   add(Number(processArgv[0]), Number(processArgv[1]));
