@@ -27,7 +27,4 @@ def main(argvs):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) >= 3:
-        main(sys.argv[1:])
-    else:
-        print("Usage Error")
+    main(sys.argv[1:])
