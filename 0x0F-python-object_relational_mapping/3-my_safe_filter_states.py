@@ -13,17 +13,16 @@ def main(argvs):
     """
 
     conn = MySQLdb.connect(
-            host="localhost", 
-            port=3306, 
-            user=f"{argvs[0]}", 
-            passwd=f"{argvs[1]}", 
-            db=f"{argvs[2]}", 
+            host="localhost",
+            port=3306,
+            user=f"{argvs[0]}",
+            passwd=f"{argvs[1]}",
+            db=f"{argvs[2]}",
             charset="utf8"
         )
     cur = conn.cursor()
     cur.execute("""
-        SELECT * FROM states 
-        WHERE name = %s 
+        SELECT * FROM states WHERE name = %s \
         ORDER BY states.id ASC """, (argvs[3],))
     query_rows = cur.fetchall()
     for row in query_rows:
