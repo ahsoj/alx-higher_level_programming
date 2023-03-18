@@ -1,4 +1,4 @@
-#!/us/rbin/python3
+#!/usr/bin/python3
 """ contains the class definition of a State \
         and an instance Base = declarative_base() """
 import sqlalchemy as sql
