@@ -23,3 +23,7 @@ class State(Base):
             autoincrement="ignore_fk"
             )
     name = sql.Column(sql.String(128), nullable=False)
+
+    def __str__(self):
+        """ return string value of this class """
+        return "{}: {}".format(self.id, self.name)
