@@ -8,7 +8,12 @@ Base = declarative_base()
 
 
 class State(Base):
-
+    """
+        inherit from Base and \
+        attr -> id: int
+             -> name: str
+        rtype: void
+    """
     __tablename__ = 'states'
     id = sql.Column(
             sql.Integer,
