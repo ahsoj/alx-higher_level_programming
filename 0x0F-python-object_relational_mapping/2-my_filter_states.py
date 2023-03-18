@@ -2,7 +2,6 @@
 """Create mysql cursor connector for selectings item from tables"""
 
 import MySQLdb
-import sys
 
 
 def main(argvs):
@@ -13,17 +12,16 @@ def main(argvs):
     """
 
     conn = MySQLdb.connect(
-            host="localhost", 
-            port=3306, 
-            user=f"{argvs[0]}", 
-            passwd=f"{argvs[1]}", 
-            db=f"{argvs[2]}", 
+            host="localhost",
+            port=3306,
+            user=f"{argvs[0]}",
+            passwd=f"{argvs[1]}",
+            db=f"{argvs[2]}",
             charset="utf8"
         )
     cur = conn.cursor()
     cur.execute("""
-        SELECT * FROM states 
-        WHERE name = '{}' 
+        SELECT * FROM states WHERE name = '{}'  \
         ORDER BY states.id ASC """.format(argvs[3]))
     query_rows = cur.fetchall()
     for row in query_rows:
@@ -33,4 +31,5 @@ def main(argvs):
 
 
 if __name__ == "__main__":
+    import sys
     main(sys.argv[1:])
