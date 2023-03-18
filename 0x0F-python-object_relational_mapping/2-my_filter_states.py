@@ -23,9 +23,8 @@ def main(argvs):
     cur.execute("""
         SELECT * FROM states WHERE name = '{}'  \
         ORDER BY states.id ASC """.format(argvs[3]))
-    query_rows = cur.fetchall()
-    for row in query_rows:
-        print(row)
+    query_rows = cur.fetchone()
+    print(query_rows)
     cur.close()
     conn.close()
 
