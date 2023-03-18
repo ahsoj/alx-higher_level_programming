@@ -2,7 +2,6 @@
 """Create mysql cursor connector for select item from tables"""
 
 import MySQLdb
-import sys
 
 
 def main(argvs):
@@ -21,7 +20,7 @@ def main(argvs):
     cur = conn.cursor()
     cur.execute("""
         SELECT cities.id, cities.name, states.name FROM cities \
-        LEFT JOIN states ON cities.state_id = states.id \
+        LEFT JOIN states ON cities.state_id = states.id  
         ORDER BY cities.id ASC """)
     query_rows = cur.fetchall()
     for row in query_rows:
@@ -31,4 +30,5 @@ def main(argvs):
 
 
 if __name__ == "__main__":
+    import sys
     main(sys.argv[1:])
