@@ -20,7 +20,7 @@ def main(argvs):
         )
     cur = conn.cursor()
     cur.execute("""
-        SELECT * FROM cities
+        SELECT * FROM cities \
         ORDER BY cities.id ASC """)
     query_rows = cur.fetchall()
     for row in query_rows:
