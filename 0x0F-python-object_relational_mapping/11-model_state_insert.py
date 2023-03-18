@@ -15,8 +15,9 @@ def main(engine):
     user = State(name="Louisiana")
     session.add(user)
     session.commit()
-    query = session.new
-    print(query)
+    query = session.query(State).filter_by(id=user.id).first()
+    if query:
+        print(str(query).rsplit(":")[0])
 
 
 if __name__ == "__main__":
