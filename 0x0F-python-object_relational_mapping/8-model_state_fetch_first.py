@@ -9,7 +9,7 @@ def main(engine):
     """
     Session = sessionmaker(bind=engine)
     query = Session().query(State).order_by(State.id.asc()).first()
-    if query == None:
+    if query is None:
         print("Nothing")
     print(query)
     # for q in query:
