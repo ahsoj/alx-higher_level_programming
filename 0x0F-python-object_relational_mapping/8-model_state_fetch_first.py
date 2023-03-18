@@ -5,9 +5,6 @@ from sqlalchemy.orm import sessionmaker
 
 
 def main(engine):
-    """
-        return item with `fetch_one` method
-    """
 
     Session = sessionmaker(bind=engine)
     query = Session().query(State).order_by(State.id.asc()).first()
