@@ -1,3 +1,3 @@
 #!/bin/bash
 # sends a GET request to the URL with header ...
-curl -G -s -H/--header 'X-School-User-Id: 98' $1
+curl -G -s --header 'X-School-User-Id: 98' $1
