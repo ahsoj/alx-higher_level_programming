@@ -1,0 +1,3 @@
+#!/bin/bash
+# send a JSON POST request to a URL & display the body of res ...
+curl -s -X POST --header "Content-Type: application/json" -d @$2 $1
