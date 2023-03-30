@@ -1,3 +1,3 @@
 #!/bin/bash
 # send a PUT request and display res ...
-curl -sLX PUT -d "email=test@gmail.com" -H "origin: 0.0.0.0:5000" 0.0.0.0:5000/catchme
+curl -sLX PUT -d "email=test@gmail.com" --header "origin: 0.0.0.0:5000" 0.0.0.0:5000/catchme
