@@ -2,7 +2,8 @@
 """
     Python script that takes in a URL and an email
 """
-import urllib.request, urllib.parse
+import urllib.request
+import urllib.parse
 
 
 def main(arg1, arg2):
