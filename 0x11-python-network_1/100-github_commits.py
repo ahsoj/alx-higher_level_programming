@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-    Holberton School staff
+    Only 17% of applicants for a backend position at \
+        Holberton finished this task in less than 15 minutes.
 """
 import requests
 
