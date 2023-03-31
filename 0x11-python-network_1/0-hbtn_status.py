@@ -1,19 +1,14 @@
 #!/usr/bin/python3
 """
     Resource Fetching function
-    The body of the response must be displayed \
-    like the following example (tabulation before -)
 """
 import urllib.request
 
 
 def main():
     """
-        fetches https://alx-intranet.hbtn.io/status 
+        fetches https://alx-intranet.hbtn.io/status
         rtype: str
-        Resource Fetching function
-        The body of the response must be displayed \
-        like the following example (tabulation before -)
     """
     with urllib.request.urlopen(
             "https://alx-intranet.hbtn.io/status") as read_url:
