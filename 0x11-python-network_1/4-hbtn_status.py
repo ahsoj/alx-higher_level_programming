@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """
-    Python script that fetches \
-    https://alx-intranet.hbtn.io/status
-    rtype: str
+   Python script that fetches \
+   The body of the response must be display \
+   like the following example (tabulation before -)
 """
 import requests
 
