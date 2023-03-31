@@ -1,9 +1,4 @@
 #!/usr/bin/python3
-"""
-   Python script that fetches \
-   The body of the response must be display \
-   like the following example (tabulation before -)
-"""
 import requests
 
 
