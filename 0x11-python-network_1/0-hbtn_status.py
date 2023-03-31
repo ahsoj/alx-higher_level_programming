@@ -1,19 +1,28 @@
 #!/usr/bin/python3
-"""Resource Fetching function"""
+"""
+    Resource Fetching function
+    The body of the response must be displayed \
+    like the following example (tabulation before -)
+"""
 import urllib.request
 
 
 def main():
-    """ fetches https://alx-intranet.hbtn.io/status """
+    """
+        fetches https://alx-intranet.hbtn.io/status 
+        rtype: str
+        Resource Fetching function
+        The body of the response must be displayed \
+        like the following example (tabulation before -)
+    """
     with urllib.request.urlopen(
             "https://alx-intranet.hbtn.io/status") as read_url:
         url = read_url.read()
-        sp = ' '
         utf = str(url).rsplit("'")[1]
         print(f"Body response:")
-        print(f"{sp*4}- type: {type(url)}")
-        print(f"{sp*4}- content: {url}")
-        print(f"{sp*4}- utf8 content: {utf}")
+        print(f"\t- type: {type(url)}")
+        print(f"\t- content: {url}")
+        print(f"\t- utf8 content: {utf}")
 
 
 if __name__ == "__main__":
