@@ -12,10 +12,9 @@ def main():
         rtype: str
     """
     req = requests.get("https://intranet.hbtn.io/status")
-    sp = ' '
     print("Body response:")
-    print(f"{sp*4}- type: {type(req.text)}")
-    print(f"{sp*4}- content: {req.text}")
+    print("\t- type: {}".format(type(r.text)))
+    print("\t- content: {}".format(r.text))
 
 
 if __name__ == "__main__":
