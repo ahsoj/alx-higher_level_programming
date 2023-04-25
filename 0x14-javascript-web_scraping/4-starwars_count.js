@@ -11,7 +11,8 @@ request(process.argv[2], function (err, response, body) {
     for (const index in responseJSON) {
       const res = responseJSON[index].characters;
       for (const _index in res) {
-        if (index[_index].includes('18')) {
+        //  console.log(res[_index])
+        if (res[_index].includes('18')) {
           __count++;
         }
       }
