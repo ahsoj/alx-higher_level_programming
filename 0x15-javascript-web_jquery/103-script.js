@@ -6,7 +6,7 @@ $(document).ready(function(){
     });
   });
   $('#language_code').keypress(function(e){
-    if(e.which == 13){
+    if(e.which === 13){
       $('#btn_translate').click();
     }
   });
